@@ -10,64 +10,50 @@
 </head>
 
 <body>
-  <form action="" name="clc">
-    <h1>Simple Calculator</h1>
-    <input  type="text" name="display" value="" style="width:350px;
-    height:60px;background-color:#9fa3df;color:black;">
-    <br>
-    <input class="btn" type="button" value="0"onclick="clc.display.value += '0'">
-    <input  class="btn" type="button" value="1" onclick="clc.display.value += '1'">
-    <input class="btn" type="button" value="2" onclick="clc.display.value += '2'">
+  
+  <div class="container">
 
-    <input class="btn" type="button"
-    onMouseOver="this.style.backgroundColor='#fff8dc'"
-    onMouseOut="this.style.backgroundColor='#ffd700'" value="+"
-    style="background-color:#ffd700;"
-    onclick="clc.display.value += '+'">
+    <div class="calculator">
+      <form>
 
-    <br>
+        <div class="display">
+          <input type="text" name ="display">
+        </div>
 
-    <input class="btn" type="button" value="3" onclick="clc.display.value += '3'">
-    <input class="btn" type="button" value="4"onclick="clc.display.value += '4'">
-    <input class="btn" type="button" value="5" onclick="clc.display.value += '5'">
-
-    <input class="btn" type="button" value="-" style="background-color:#ff4500";
-    onMouseOver=" this.style.backgroundColor='#fff8dc'"
-    onMouseOut=" this.style.backgroundColor='#ff4500'"
-    onclick="clc.display.value += '-'">
-
-    <br>
-
-    <input class="btn" type="button" value="6" onclick="clc.display.value += '6'">
-    <input class="btn" type="button" value="7" onclick="clc.display.value += '7'">
-    <input class="btn" type="button" value="8" onclick="clc.display.value += '8'">
-
-    <input class="btn" type="button" value="*" style="background-color:#4682b4;"
-    onMouseOver=" this.style.backgroundColor='#fff8dc'"
-    onMouseOut=" this.style.backgroundColor='#4682b4'"
-    onclick="clc.display.value += '*'">
-
-    <br>
-
-    <input class="btn" type="button" value="9" onclick="clc.display.value += '9'">
-
-    <input class="btn" type="button" value="C" style="background-color:	#f5deb3;"
-    onMouseOver=" this.style.backgroundColor='#fff8dc'"
-    onMouseOut=" this.style.backgroundColor='#f5deb3'"
-    onclick="clc.display.value = ''">
-
-    <input class="btn" type="button" value="=" style="background-color:#fa8072;"
-    onMouseOver=" this.style.backgroundColor='#fff8dc'"
-    onMouseOut=" this.style.backgroundColor='#fa8072'"
-    onclick="clc.display.value = eval(clc.display.value)">
-
-    <input class="btn" type="button" value="&#247;" style="background-color:#98fb98;"
-    onMouseOver=" this.style.backgroundColor='#fff8dc'"
-    onMouseOut=" this.style.backgroundColor='#98fb98'"
-    onclick="clc.display.value += '/'">
-
-  </form>
-
+        <div>
+           <input type="button" value="AC"onclick="display.value = ''" class="operator">
+           <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"  class="operator">
+            <input type="button" value="."onclick="display.value += '.'" class="operator">
+            <input type="button" value="/"onclick="display.value += '/'"class="operator">
+        </div>
+        <div>
+           <input type="button" value="7" onclick="display.value += '7'">
+           <input type="button" value="8" onclick="display.value += '8'">
+            <input type="button" value="9"onclick="display.value += '9'">
+            <input type="button" value="*"onclick="display.value += '*'" class="operator">
+        </div>
+        <div>
+           <input type="button" value="4" onclick="display.value += '4'">
+           <input type="button" value="5"onclick="display.value += '5'">
+            <input type="button" value="6"onclick="display.value += '6'">
+            <input type="button" value="-"onclick="display.value += '-'" class="operator">
+        </div>
+        <div>
+           <input type="button" value="1"onclick="display.value += '1'"> 
+           <input type="button" value="2"onclick="display.value += '2'">
+            <input type="button" value="3"onclick="display.value += '3'">
+            <input type="button" value="+"onclick="display.value += '+'"class="operator">
+        </div>
+        <div>
+           <input type="button" value="00"onclick="display.value += '00'">
+           <input type="button" value="0"onclick="display.value += '0'">
+            <input type="button" value="=" onclick="display.value=eval(display.value)" class="equal operator">
+           
+        </div>
+      </form>
+    </div>
+   
+  </div>
 
 
 </body>
